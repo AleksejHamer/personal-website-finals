@@ -97,9 +97,27 @@ function App() {
         {activeTab === 'STAT' && (
           <div className="animate-fade">
             <div className="post-card">
+              <h3>{'>'} USER_PROFILE: ALEKSEJ</h3>
+              <p>{'>'} ROLE: FULL-STACK DEVELOPER & IOT ENGINEER</p>
+              <p>{'>'} LOCATION: PASAY CITY, PH</p>
+              <hr style={{borderColor: 'var(--pip-purple)', margin: '15px 0'}} />
+              
+              <p><strong>SKILLS_LOG:</strong></p>
+              <ul style={{listStyleType: "'> '"}}>
+                <li>Frontend: React, Vite, CSS3 (Responsive)</li>
+                <li>Backend: NestJS, REST API Development</li>
+                <li>Database: Supabase, SQL</li>
+                <li>Specialty: Arduino R4 IoT & Industrial Automation</li>
+              </ul>
+
+              <p><strong>ACTIVE_PROJECTS:</strong></p>
+              <p>- GreenData Industrial Automator (IoT Controller)</p>
+              <p>- NBA Postseason Oracle (ML-Driven Predictor)</p>
+              <p>- Guestbook REST API Integration (Final Project)</p>
+              
+              <hr style={{borderColor: 'var(--pip-purple)', margin: '15px 0'}} />
               <p>{'>'} SYSTEM STATUS: NOMINAL</p>
               <p>{'>'} DATABASE: CONNECTED (SUPABASE)</p>
-              <p>{'>'} BACKEND: NESTJS REST API</p>
             </div>
           </div>
         )}
@@ -108,6 +126,8 @@ function App() {
           <div className="animate-fade">
             <div className="post-card">
               <p>{'>'} LOCATION: PASAY CITY, METRO MANILA</p>
+              <p>{'>'} TIMEZONE: GMT+8</p>
+              <p>{'>'} COORDINATES: 14.5333° N, 121.0000° E</p>
             </div>
           </div>
         )}
