@@ -128,7 +128,7 @@ function App() {
               <div className="map-viewport">
                 <div className="map-overlay">SITE_LOCATION: COMMONWEALTH</div>
                 <img 
-                  src="https://preview.redd.it/6l10zof2fvyz.png?auto=webp&s=5552377b21e05d9e50e939a83693e8e89f6d4d42" 
+                  src="https://images.uesp.net/b/bb/FO4-map-Commonwealth.png" 
                   alt="Commonwealth Map" 
                   className="pipboy-map-img"
                 />
