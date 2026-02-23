@@ -10,17 +10,23 @@ body {
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
   overflow-x: hidden;
+  /* Centering Logic for Desktop */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
 }
 
 .container {
   width: 95%;
   max-width: 800px;
-  margin: 0 auto;
+  /* margin: 0 auto; removed in favor of body flexbox */
   padding: 20px;
   min-height: 100vh;
   box-sizing: border-box;
   text-shadow: 0 0 5px var(--pip-purple);
   animation: flicker 0.15s infinite;
+  position: relative;
 }
 
 .container::after {
@@ -111,6 +117,7 @@ button[type="submit"] {
   background-color: var(--pip-purple);
   margin-left: 5px;
   animation: blink 1s step-end infinite;
+  vertical-align: middle;
 }
 
 .system-footer {
