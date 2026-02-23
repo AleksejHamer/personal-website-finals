@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-// Interface to fix TypeScript "red lines" on post properties
 interface GuestbookPost {
   name: string;
   message: string;
@@ -13,7 +12,6 @@ function App() {
   const [message, setMessage] = useState('');
   const [activeTab, setActiveTab] = useState('DATA'); 
   
-  // UPDATED: Now pointing to your live Render backend
   const API_URL = "https://personal-website-finals-bti9.onrender.com/guestbook";
 
   const fetchPosts = async () => {
@@ -65,19 +63,8 @@ function App() {
           <div className="animate-fade">
             <div className="form-card">
               <form onSubmit={handleUpload}>
-                <input 
-                  placeholder="[ USERNAME ]" 
-                  value={name} 
-                  onChange={(e) => setName(e.target.value)} 
-                  required 
-                />
-                <textarea 
-                  placeholder="[ MESSAGE ]" 
-                  value={message} 
-                  onChange={(e) => setMessage(e.target.value)} 
-                  required 
-                  rows={3} 
-                />
+                <input placeholder="[ USERNAME ]" value={name} onChange={(e) => setName(e.target.value)} required />
+                <textarea placeholder="[ MESSAGE ]" value={message} onChange={(e) => setMessage(e.target.value)} required rows={3} />
                 <button type="submit">_UPLOAD_DATA_</button>
               </form>
             </div>
@@ -85,7 +72,6 @@ function App() {
             <div className="posts-list">
               {posts.map((post, i) => (
                 <div key={i} className="post-card">
-                  {/* Corrected syntax for displaying the > symbol */}
                   <div className="user-name">{'>'} {post.name.toUpperCase()}</div>
                   <p>{post.message}</p>
                 </div>
@@ -100,24 +86,20 @@ function App() {
               <h3>{'>'} USER_PROFILE: ALEKSEJ</h3>
               <p>{'>'} ROLE: FULL-STACK DEVELOPER & IOT ENGINEER</p>
               <p>{'>'} LOCATION: PASAY CITY, PH</p>
-              <hr style={{borderColor: 'var(--pip-purple)', margin: '15px 0'}} />
               
-              <p><strong>SKILLS_LOG:</strong></p>
-              <ul style={{listStyleType: "'> '"}}>
-                <li>Frontend: React, Vite, CSS3 (Responsive)</li>
-                <li>Backend: NestJS, REST API Development</li>
-                <li>Database: Supabase, SQL</li>
-                <li>Specialty: Arduino R4 IoT & Industrial Automation</li>
-              </ul>
+              <hr className="purple-hr" />
+              
+              <div className="stats-list">
+                <p>STRENGTH [RE-ACT] <span className="bar">[||||||||--] 80%</span></p>
+                <p>PERCEPTION [API] <span className="bar">[||||||||||] 100%</span></p>
+                <p>ENDURANCE [NEST] <span className="bar">[|||||||---] 70%</span></p>
+                <p>LUCK [SUPABASE]  <span className="bar">[|||||||||-] 90%</span></p>
+              </div>
 
+              <hr className="purple-hr" />
               <p><strong>ACTIVE_PROJECTS:</strong></p>
               <p>- GreenData Industrial Automator (IoT Controller)</p>
               <p>- NBA Postseason Oracle (ML-Driven Predictor)</p>
-              <p>- Guestbook REST API Integration (Final Project)</p>
-              
-              <hr style={{borderColor: 'var(--pip-purple)', margin: '15px 0'}} />
-              <p>{'>'} SYSTEM STATUS: NOMINAL</p>
-              <p>{'>'} DATABASE: CONNECTED (SUPABASE)</p>
             </div>
           </div>
         )}
@@ -128,6 +110,7 @@ function App() {
               <p>{'>'} LOCATION: PASAY CITY, METRO MANILA</p>
               <p>{'>'} TIMEZONE: GMT+8</p>
               <p>{'>'} COORDINATES: 14.5333° N, 121.0000° E</p>
+              <p>{'>'} STATUS: ONLINE</p>
             </div>
           </div>
         )}
