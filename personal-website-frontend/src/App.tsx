@@ -131,6 +131,7 @@ function App() {
                   src="https://images.uesp.net/b/bb/FO4-map-Commonwealth.png" 
                   alt="Commonwealth Map" 
                   className="pipboy-map-img"
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </div>
 
