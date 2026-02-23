@@ -14,6 +14,13 @@ function App() {
   
   const API_URL = "https://personal-website-finals-bti9.onrender.com/guestbook";
 
+  // Audio trigger function
+  const playSound = () => {
+    const audio = new Audio('https://www.soundjay.com/buttons/sounds/button-16.mp3');
+    audio.volume = 0.2;
+    audio.play().catch(() => console.log("Audio blocked: Click anywhere on the page first."));
+  };
+
   const fetchPosts = async () => {
     try {
       const res = await fetch(API_URL);
@@ -30,6 +37,7 @@ function App() {
 
   const handleUpload = async (e: React.FormEvent) => {
     e.preventDefault();
+    playSound(); // Trigger sound on submit
     try {
       await fetch(API_URL, {
         method: 'POST',
@@ -53,9 +61,24 @@ function App() {
       </header>
 
       <nav className="pipboy-nav">
-        <button className={activeTab === 'STAT' ? 'active' : ''} onClick={() => setActiveTab('STAT')}>STAT</button>
-        <button className={activeTab === 'DATA' ? 'active' : ''} onClick={() => setActiveTab('DATA')}>DATA</button>
-        <button className={activeTab === 'MAP' ? 'active' : ''} onClick={() => setActiveTab('MAP')}>MAP</button>
+        <button 
+          className={activeTab === 'STAT' ? 'active' : ''} 
+          onClick={() => { setActiveTab('STAT'); playSound(); }}
+        >
+          STAT
+        </button>
+        <button 
+          className={activeTab === 'DATA' ? 'active' : ''} 
+          onClick={() => { setActiveTab('DATA'); playSound(); }}
+        >
+          DATA
+        </button>
+        <button 
+          className={activeTab === 'MAP' ? 'active' : ''} 
+          onClick={() => { setActiveTab('MAP'); playSound(); }}
+        >
+          MAP
+        </button>
       </nav>
 
       <div className="screen-content">

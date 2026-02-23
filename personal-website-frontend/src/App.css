@@ -97,13 +97,11 @@ button[type="submit"] {
   color: var(--pip-purple);
   text-decoration: none;
   border-bottom: 1px dashed var(--pip-purple);
-  transition: 0.3s;
 }
 
 .terminal-link:hover {
   background-color: var(--pip-purple);
   color: black;
-  box-shadow: var(--pip-glow);
 }
 
 .cursor {
@@ -113,7 +111,6 @@ button[type="submit"] {
   background-color: var(--pip-purple);
   margin-left: 5px;
   animation: blink 1s step-end infinite;
-  vertical-align: middle;
 }
 
 .system-footer {
