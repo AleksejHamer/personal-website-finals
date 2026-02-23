@@ -59,6 +59,7 @@ function App() {
       </nav>
 
       <div className="screen-content">
+        {/* DATA TAB: Guestbook with REST API */}
         {activeTab === 'DATA' && (
           <div className="animate-fade">
             <div className="form-card">
@@ -80,12 +81,12 @@ function App() {
           </div>
         )}
         
+        {/* STAT TAB: Personal Profile and IoT Projects */}
         {activeTab === 'STAT' && (
           <div className="animate-fade">
             <div className="post-card">
               <h3>{'>'} USER_PROFILE: ALEKSEJ</h3>
               <p>{'>'} ROLE: FULL-STACK DEVELOPER & IOT ENGINEER</p>
-              <p>{'>'} LOCATION: PASAY CITY, PH</p>
               
               <hr className="purple-hr" />
               
@@ -93,24 +94,33 @@ function App() {
                 <p>STRENGTH [RE-ACT] <span className="bar">[||||||||--] 80%</span></p>
                 <p>PERCEPTION [API] <span className="bar">[||||||||||] 100%</span></p>
                 <p>ENDURANCE [NEST] <span className="bar">[|||||||---] 70%</span></p>
-                <p>LUCK [SUPABASE]  <span className="bar">[|||||||||-] 90%</span></p>
               </div>
 
               <hr className="purple-hr" />
-              <p><strong>ACTIVE_PROJECTS:</strong></p>
-              <p>- GreenData Industrial Automator</p>
-              <p>- NBA Postseason Oracle</p>
+              <p><strong>IOT_PROJECT_LOGS:</strong></p>
+              <p>- <a href="https://wokwi.com/projects/456728409234091009" target="_blank" className="terminal-link">PEMBEDS_FINALS_EXAM</a></p>
+              <p>- <a href="https://wokwi.com/projects/456401951483048961" target="_blank" className="terminal-link">GREENDATA_INDUSTRIAL_AUTOMATOR</a></p>
             </div>
           </div>
         )}
 
+        {/* MAP TAB: Contact Information and Professional Links */}
         {activeTab === 'MAP' && (
           <div className="animate-fade">
             <div className="post-card">
-              <p>{'>'} LOCATION: PASAY CITY, METRO MANILA</p>
-              <p>{'>'} TIMEZONE: GMT+8</p>
-              <p>{'>'} COORDINATES: 14.5333° N, 121.0000° E</p>
-              <p>{'>'} STATUS: ONLINE</p>
+              <h3>{'>'} COMMUNICATIONS_HUB</h3>
+              <p><strong>NETWORK_LINKS:</strong></p>
+              <p>- <a href="https://github.com/AleksejHamer" target="_blank" className="terminal-link">GITHUB_PROFILER</a></p>
+              <p>- <a href="https://www.linkedin.com/in/aleksej-hamer-72a7a3322/" target="_blank" className="terminal-link">LINKEDIN_INTEL</a></p>
+              
+              <hr className="purple-hr" />
+              <p><strong>DIRECT_MESSAGING:</strong></p>
+              <p>EDU: ahamer@student.apc.edu.ph</p>
+              <p>PRV: aleksejhamer@gmail.com</p>
+              
+              <hr className="purple-hr" />
+              <p>{'>'} LOCATION: PASAY CITY, PH</p>
+              <p>{'>'} STATUS: BROADCASTING_LIVE</p>
             </div>
           </div>
         )}
