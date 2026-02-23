@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+// Interface to fix TypeScript "red lines" on post properties
 interface GuestbookPost {
   name: string;
   message: string;
@@ -12,7 +13,8 @@ function App() {
   const [message, setMessage] = useState('');
   const [activeTab, setActiveTab] = useState('DATA'); 
   
-  const API_URL = "https://friendly-trout-v69v4wvj6w64fxqxg-3000.app.github.dev/guestbook";
+  // UPDATED: Now pointing to your live Render backend
+  const API_URL = "https://personal-website-finals-bti9.onrender.com/guestbook";
 
   const fetchPosts = async () => {
     try {
@@ -63,8 +65,19 @@ function App() {
           <div className="animate-fade">
             <div className="form-card">
               <form onSubmit={handleUpload}>
-                <input placeholder="[ USERNAME ]" value={name} onChange={(e) => setName(e.target.value)} required />
-                <textarea placeholder="[ MESSAGE ]" value={message} onChange={(e) => setMessage(e.target.value)} required rows={3} />
+                <input 
+                  placeholder="[ USERNAME ]" 
+                  value={name} 
+                  onChange={(e) => setName(e.target.value)} 
+                  required 
+                />
+                <textarea 
+                  placeholder="[ MESSAGE ]" 
+                  value={message} 
+                  onChange={(e) => setMessage(e.target.value)} 
+                  required 
+                  rows={3} 
+                />
                 <button type="submit">_UPLOAD_DATA_</button>
               </form>
             </div>
@@ -72,6 +85,7 @@ function App() {
             <div className="posts-list">
               {posts.map((post, i) => (
                 <div key={i} className="post-card">
+                  {/* Corrected syntax for displaying the > symbol */}
                   <div className="user-name">{'>'} {post.name.toUpperCase()}</div>
                   <p>{post.message}</p>
                 </div>
@@ -83,7 +97,6 @@ function App() {
         {activeTab === 'STAT' && (
           <div className="animate-fade">
             <div className="post-card">
-              {/* Fixes for the red lines in STAT */}
               <p>{'>'} SYSTEM STATUS: NOMINAL</p>
               <p>{'>'} DATABASE: CONNECTED (SUPABASE)</p>
               <p>{'>'} BACKEND: NESTJS REST API</p>
@@ -94,7 +107,6 @@ function App() {
         {activeTab === 'MAP' && (
           <div className="animate-fade">
             <div className="post-card">
-              {/* Fix for the red line in MAP */}
               <p>{'>'} LOCATION: PASAY CITY, METRO MANILA</p>
             </div>
           </div>
