@@ -11,7 +11,7 @@ function App() {
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [activeTab, setActiveTab] = useState('DATA'); 
-  const [subTab, setSubTab] = useState<string | null>(null); // State for interactive stats
+  const [subTab, setSubTab] = useState<string | null>(null); 
   
   const API_URL = "https://personal-website-finals-bti9.onrender.com/guestbook";
 
@@ -114,9 +114,9 @@ function App() {
               <div className="post-card animate-fade">
                 <button className="back-btn" onClick={() => { setSubTab(null); playSound(); }}>{'<<'} BACK_TO_STATS</button>
                 <h3>{'>'} {subTab}_REPORT</h3>
-                {subTab === 'STRENGTH' && <p>My strength lies in Frontend Architecture. I specialize in building high-performance React components and managing complex application states.</p>}
-                {subTab === 'PERCEPTION' && <p>My perception is focused on Data Integrity. I am proficient in RESTful API design, ensuring seamless communication between backends and databases.</p>}
-                {subTab === 'ENDURANCE' && <p>My endurance is proven in System Reliability. I have experience troubleshooting CORS issues and maintaining cloud infrastructure.</p>}
+                {subTab === 'STRENGTH' && <p>STRENGTH: Can carry a heavy React monorepo without breaking a sweat, but still struggles to lift a single CSS `div` to the center of the screen without help.</p>}
+                {subTab === 'PERCEPTION' && <p>PERCEPTION: 10/10. Can spot a missing semicolon in a 500-line script from across the room. Warning: This ability causes physical pain when looking at unformatted code.</p>}
+                {subTab === 'ENDURANCE' && <p>ENDURANCE: Fueled by pure caffeine. Can survive 72 hours of debugging CORS errors and Vercel 404s. Current status: "One more bug and I'm moving to the woods."</p>}
               </div>
             )}
           </div>
@@ -125,6 +125,15 @@ function App() {
         {activeTab === 'MAP' && (
           <div className="animate-fade">
             <div className="post-card">
+              <div className="map-viewport">
+                <div className="map-overlay">SITE_LOCATION: COMMONWEALTH</div>
+                <img 
+                  src="https://preview.redd.it/6l10zof2fvyz.png?auto=webp&s=5552377b21e05d9e50e939a83693e8e89f6d4d42" 
+                  alt="Commonwealth Map" 
+                  className="pipboy-map-img"
+                />
+              </div>
+
               <h3>{'>'} COMMUNICATIONS_HUB</h3>
               <p><strong>NETWORK_LINKS:</strong></p>
               <p>- <a href="https://github.com/AleksejHamer" target="_blank" className="terminal-link">GITHUB_PROFILER</a></p>
