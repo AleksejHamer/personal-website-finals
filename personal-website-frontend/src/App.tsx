@@ -48,7 +48,7 @@ function App() {
     <div className="container">
       <div className="scanline"></div>
       <header>
-        <h1>ROBCO INDUSTRIES</h1>
+        <h1>ROBCO INDUSTRIES<span className="cursor"></span></h1>
         <p className="subtitle">GUEST_LOG_v4.0.2 [FINAL_RELEASE]</p>
       </header>
 
@@ -98,8 +98,8 @@ function App() {
 
               <hr className="purple-hr" />
               <p><strong>ACTIVE_PROJECTS:</strong></p>
-              <p>- GreenData Industrial Automator (IoT Controller)</p>
-              <p>- NBA Postseason Oracle (ML-Driven Predictor)</p>
+              <p>- GreenData Industrial Automator</p>
+              <p>- NBA Postseason Oracle</p>
             </div>
           </div>
         )}
@@ -115,6 +115,11 @@ function App() {
           </div>
         )}
       </div>
+
+      <footer className="system-footer">
+        <p>[ CPU: NESTJS_V10 ] [ MEM: SUPABASE_CLOUD ] [ OS: REACT_VITE ]</p>
+        <p>© 2026 ROBCO TERMINAL SERVICES - ALL RIGHTS RESERVED</p>
+      </footer>
     </div>
   );
 }
